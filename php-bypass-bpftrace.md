@@ -1,4 +1,4 @@
-[@cr0nym](https://x.com/cr0nym) posted about using bpftrace to generically stop php from executing execve, preventing most generic web shells + command execution exploits:  
+[@cr0nym](https://x.com/cr0nym) posted about using bpftrace to generically stop php and other /specific/ procs from calling execve, preventing most generic web shells + command execution exploits:  
 [Generic bpftrace-based RCE/webshell prevention technique for critical Linux network services](https://www.defensive-security.com/resources/generic-bpftrace-based-rcewebshell-prevention-technique-for-critical-linux-network-services)
 
 some distros such as latest debian ship PHP with FFI enabled by default which means one can just call prctl to change the name of the forked process to bypass the blacklist. There are other methods incase prctl is added to the script left as an exercise to astute readers.  
